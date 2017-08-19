@@ -120,16 +120,6 @@ void houseAutoLighting()
   int lightValue = analogRead(lightPin);
   Blynk.virtualWrite(V1, lightValue);
 
-  /*
-  if(lightValue <= 650)
-    digitalWrite(ledPinInside, HIGH);
-  else
-    digitalWrite(ledPinInside, LOW);
-   */
-
-  //lightValue = constrain(lightValue, 600, 800);
-  //int ledLevel = map(lightValue, 600, 800, 255, 0);
-
   lightValue = constrain(lightValue, 800, 900);
   int ledLevel = map(lightValue, 800, 900, 255, 0);
 
@@ -143,16 +133,12 @@ void protection()
   if (!rfid.PICC_IsNewCardPresent() || !rfid.PICC_ReadCardSerial())
   return;
 
-  // Serial.print(F("PICC type: "));
   MFRC522::PICC_Type piccType = rfid.PICC_GetType(rfid.uid.sak);
-  // Serial.println(rfid.PICC_GetTypeName(piccType));
 
-  // Check is the PICC of Classic MIFARE type
   if (piccType != MFRC522::PICC_TYPE_MIFARE_MINI &&
     piccType != MFRC522::PICC_TYPE_MIFARE_1K &&
     piccType != MFRC522::PICC_TYPE_MIFARE_4K) 
   {
-    //Serial.println(F("Your tag is not of type MIFARE Classic."));
     Blynk.virtualWrite(V0, "Your tag is not of type MIFARE Classic.");
     return;
   }
@@ -167,11 +153,8 @@ void protection()
   }
   strID.toUpperCase();
 
-  //Serial.print("Tap card key: ");
-  //Serial.println(strID);
   Blynk.virtualWrite(V0, String("ID: ") + strID);
   
-
   if (strID.indexOf("50:D5:0E:7C") >= 0)
   {
     Blynk.virtualWrite(V3, 0);
