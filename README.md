@@ -1,3 +1,5 @@
+
+
 # Simple-Smart-House
 Pretty simple project with Arduino Uno, some sensors and Blynk.
 
@@ -5,11 +7,11 @@ Pretty simple project with Arduino Uno, some sensors and Blynk.
 
 For this project I used next hardware:
   - Arduino Uno Rev 3
-  - Temperature and humidity sensor DHT 11
-  - RFID sensor
-  - Infrared motion sensor
+  - Temperature and humidity sensor (DHT 11)
+  - RFID sensor (RC 522)
+  - Infrared motion sensor (HC-SR501)
   - Light sensor (LDR)
-  - Servomotor 
+  - Servomotor (MG 90s Micro)
   - Wires, resistors, LEDs, etc.
   
 ## Software
@@ -22,3 +24,5 @@ For this project I used next hardware:
  Here the screenshot of my project (UI):
 <img src="https://cldup.com/q7Ub1iO-iP.png" height="480" width="270" align="top">
 
+Here is the wiring diagram:
+<img src="https://cldup.com/z_nADoX5HX.jpg" height="441" width="1088" align="top">
