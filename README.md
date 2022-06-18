@@ -1,7 +1,6 @@
 # Simple-Smart-House
 
-### Tech
-For this project I used next hardware:
+### Hardvare
 - Arduino Uno Rev 3
 - Temperature and humidity sensor (DHT 11)
 - RFID sensor (RC 522)
