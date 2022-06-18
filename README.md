@@ -10,12 +10,13 @@
 - Wires, resistors, LEDs, etc.
   
 ### Software
-As monitoring and managemet software I used Blynk. It's the mobile app for IoT.
+As monitoring and managemet software I used Blynk.
+It's the mobile app for IoT.
  
 For more details about the app check Blynk web-site
 [<img src="https://cldup.com/tHQYtiCDkX.png" height="80" width="80" align="middle">](http://www.blynk.cc/)
  
-UI example
+### UI example
 <img src="https://cldup.com/q7Ub1iO-iP.png" height="480" width="270" align="top">
 
 ### Architecture
